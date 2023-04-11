@@ -1,0 +1,119 @@
+table.name {
+    width: 700px;
+    border: 0px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: white;
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+
+td.name {
+    width: 300px;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    font-weight: bold;
+}
+
+td.cnt {
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    font-size: medium;
+}
+
+div.except {
+    color: black;
+}
+
+p.flogo {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+img.ilogo {
+    width: 152px;
+    height: 150px;
+}
+
+#ubd-container {
+    width: 1280px;
+    margin: 10px auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 0px solid #bcbcbc;
+}
+
+#ubd-header {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #bcbcbc;
+}
+
+#ubd-content {
+    width: 780px;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+}
+
+#ubd-sidebar {
+    width: 440px;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: right;
+    border: 1px solid #bcbcbc;
+}
+
+#ubd-footer {
+    clear: both;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+}
+
+@media ( max-width: 720px ) {
+    #ubd-container {
+        width: auto;
+    }
+
+    #ubd-content {
+        float: none;
+        width: auto;
+    }
+
+    #ubd-sidebar {
+        float: none;
+        width: auto;
+    }
+
+    table.name {
+        width: 700px;
+        border: 0px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        border-color: white;
+        color: white;
+        text-align: center;
+        font-size: medium;
+    }
+
+    td.cnt {
+        border-left: 0px;
+        border-top: 0px;
+        border-bottom: 0px;
+        font-size: small;
+    }
+
+    p.flogo {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    img.ilogo {
+        width: 76px;
+        height: 75px;
+    }
+}
