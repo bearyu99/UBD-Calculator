@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap&subset=korean" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/locale/ko.js"></script>
+
+    <script src="js\Movie.js"></script>
+    <script type="text/javascript">
+
+
+        var temp;
+
+        function datein() {
+            var input = document.getElementById("datein").value;
+            temp = input;
+        }
+
+        function dateout() {
+            document.getElementById("dateout").value = temp;
+        }
+
+        function input() {
+            inval = document.getElementById("input").value
+            alert((inval / 172000).toFixed(3) + " UBD");
+        }
+    </script>
+    <link rel="stylesheet" href="css/Style.css" />
+    <style>
+        * {
+            color: white;
+            font-family: 'Jua', sans-serif;
+        }
+
+        .hfont {
+            font-family: 'Jua', sans-serif;
+        }
+    </style>
+    <title>UBD Calculator</title>
+</head>
+
+<body onload="loadDoc();" style="background-color: #2a3659">
+    <div id="ubd-container">
+        <div id="ubd-header">
+            <div style="text-align: center;">
+                <p class="flogo">
+                    <img src="img/logo.png" align="middle" class="ilogo" />
+                    UBD Calculator
+                </p>
+            </div>
+        </div>
+        <div id="ubd-content">
+            <h2 class="hfont">Box Office</h2>
+            <p id="tod" style="text-align: center; margin-top: 20px"></p>
+            <table border="1" class="name">
+                <tbody>
+                    <tr>
+                        <td id="mov0" class="name"></td>
+                        <td id="mov1" class="name"></td>
+                        <td id="mov2" class="name"></td>
+                        <td id="mov3" class="name"></td>
+                        <td id="mov4" class="name" style="border-right: 0px"></td>
+                    </tr>
+                    <tr style="font-size: medium">
+                        <td id="cnt0" class="cnt"></td>
+                        <td id="cnt1" class="cnt"></td>
+                        <td id="cnt2" class="cnt"></td>
+                        <td id="cnt3" class="cnt"></td>
+                        <td id="cnt4" class="cnt" style="border-right: 0px"></td>
+                    </tr>
+                    <tr style="font-size: medium">
+                        <td id="ubd0" class="cnt"></td>
+                        <td id="ubd1" class="cnt"></td>
+                        <td id="ubd2" class="cnt"></td>
+                        <td id="ubd3" class="cnt"></td>
+                        <td id="ubd4" class="cnt" style="border-right: 0px"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <table border="1" class="name" style="margin-bottom: 20px">
+                <tbody>
+                    <tr>
+                        <td id="mov5" class="name"></td>
+                        <td id="mov6" class="name"></td>
+                        <td id="mov7" class="name"></td>
+                        <td id="mov8" class="name"></td>
+                        <td id="mov9" class="name" style="border-right: 0px"></td>
+                    </tr>
+                    <tr style="font-size: medium">
+                        <td id="cnt5" class="cnt"></td>
+                        <td id="cnt6" class="cnt"></td>
+                        <td id="cnt7" class="cnt"></td>
+                        <td id="cnt8" class="cnt"></td>
+                        <td id="cnt9" class="cnt" style="border-right: 0px"></td>
+                    </tr>
+                    <tr style="font-size: medium">
+                        <td id="ubd5" class="cnt"></td>
+                        <td id="ubd6" class="cnt"></td>
+                        <td id="ubd7" class="cnt"></td>
+                        <td id="ubd8" class="cnt"></td>
+                        <td id="ubd9" class="cnt" style="border-right: 0px"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="ubd-sidebar">
+            <h2 class="hfont">Search</h2>
+            <div class="except">
+                <div class="input-group" style="margin-top: 20px">
+                    <input type="text" style=" height: 50px" class="form-control" id="datein" placeholder="ex) 20190525">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" style="height: 50px" type="button" onclick="research()">입력</button>
+                    </span>
+                </div>
+            </div>
+            <br />
+            <div class="except">
+                <div class="input-group" style="margin-bottom: 10px">
+                    <input type="text" id="input" style=" height: 50px" class="form-control" placeholder="ex) 172000">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" style="height: 50px" onclick="input()">입력</button>
+                    </span>
+                </div>
+            </div>
+            <p style="margin-top: 15px; margin-bottom: 15px; font-size: large;">
+                UBD는?
+            </p>
+            <p style="margin-left: 1em;">
+                문화산업 콘텐츠, 특히 영화 티켓 판매량의 단위를 뜻하는 인터넷 유행어이다.
+                영화 자전차왕 엄복동의 '엄복동'(Um Bok-Dong)에서 앞의 한 글자씩 따온 줄임말로
+                후술할 여러 이유로 박스오피스 딜러 유닛처럼 쓰게 되었다.
+            </p>
+        </div>
+        <div id="ubd-footer">
+            <p style="margin-top: 10px; font-size: large;">
+                참고
+            </p>
+            <p style="margin-left: 1em;">
+                영화정보 제공:
+                <a style="color:darkgray;" href="http://www.kobis.or.kr/kobisopenapi/homepg/main/main.do" target="_blank">KOBIS 영화관입장권통합전산망 오픈API</a>
+                <br />
+                여기에 더 좋은 UBD 계산기가 있어요!: 
+                <a style="color:darkgray" href="https://github.com/sistinafibel/ubdAPI">GITHUB ubdAPI</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
