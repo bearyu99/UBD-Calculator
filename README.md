@@ -1,4 +1,5 @@
-![logo](/img/logo.png)
+<p align="center"><img src="/img/logo_old.png" width="25%" height="25%"/></p>
+
 # [UBD-Calculator](https://bearyu99.github.io/UBD-Calculator)
 2019년 과제로 제출한 작업물입니다.
 
